@@ -17,9 +17,17 @@ class Bullet(Sprite):
 		self.y = float(self.rect.y)
 
 		self.color = ai_setting.bullet_color
-		self.speed_factor = ai_setting.bullet_speed_factor
+		self.speed_factor = ai_setting.bullet_speed
 
+	def update(self):
+		#向上移动子弹
+		self.y -= self.speed_factor
+		#更新表示子弹的rect的位置
+		self.rect.y = self.y
 
+	def draw_bullet(self):
+		#屏幕上绘制子弹
+		pygame.draw.rect(self.screen,self.color,self.rect)
 
 
 	

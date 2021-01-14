@@ -17,7 +17,7 @@ class Bullet(Sprite):
 		self.y = float(self.rect.y)
 
 		self.color = ai_setting.bullet_color
-		self.speed_factor = ai_setting.bullet_speed
+		self.speed_factor = ai_setting.bullet_speed_factor
 
 	def update(self):
 		#向上移动子弹
